@@ -1,4 +1,4 @@
-3DSkell
-=======
+MitoGraph
+=========
 
-Skeletonization of 3D binary volumes
+Software for Quantifying Mitochondrial Content in Live Cells
