@@ -1060,6 +1060,11 @@ bool MergeEdgesOfDegree2Nodes(vtkPolyData *PolyData, int *K) {
    MAIN ROUTINE
 =================================================================*/
 
+void _help() {
+    printf("\n 3DSkell options:\n");
+    printf("\t -path, -cc, -graph_off, -thinning_only\n");
+}
+
 int main(int argc, char *argv[]) {     
 
     int i;
@@ -1080,6 +1085,10 @@ int main(int argc, char *argv[]) {
         }
         if (!strcmp(argv[i],"-thinning_only")) {
             _thinning_only = true;
+        }
+        if (!strcmp(argv[i],"-?")) {
+            _help();
+            return 1;
         }
     }
 
@@ -1104,4 +1113,5 @@ int main(int argc, char *argv[]) {
     }
     fclose(f);
 
+    return 1;
 }
