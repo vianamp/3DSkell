@@ -1107,6 +1107,8 @@ int main(int argc, char *argv[]) {
             _small_cc_size = 0;
         } else if (_cc_value==-1) {
             _small_cc_size = -1;
+        } else {
+            _small_cc_size = _cc_value;
         }
         _tifffilename[strcspn(_tifffilename, "\n" )] = '\0';
         Thinning3D(_tifffilename);
